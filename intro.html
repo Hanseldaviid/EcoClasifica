@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Juego de Clasificación de Residuos</title>
+    <link rel="stylesheet" href="estilo.css"> <!-- Une el CSS -->
+</head>
+<body>
+    <h1 style="text-align:center;">Clasifica los residuos en la caneca correcta</h1>
+
+   <!-- RESIDUOS ARRIBA -->
+<div id="residuos" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; margin: 30px;">
+    <!-- Aprovechables -->
+    <div style="text-align:center;"><p>Botella</p><img src="Assets/botella.png" alt="Botella" class="residuo" draggable="true" data-tipo="aprovechable"></div>
+    <div style="text-align:center;"><p>Lata</p><img src="Assets/lata.png" alt="Lata" class="residuo" draggable="true" data-tipo="aprovechable"></div>
+    <div style="text-align:center;"><p>Caja</p><img src="Assets/caja.png" alt="Caja" class="residuo" draggable="true" data-tipo="aprovechable"></div>
+    <div style="text-align:center;"><p>Papel</p><img src="Assets/papel.png" alt="Papel" class="residuo" draggable="true" data-tipo="aprovechable"></div>
+    <div style="text-align:center;"><p>Cartón</p><img src="Assets/carton.png" alt="Cartón" class="residuo" draggable="true" data-tipo="aprovechable"></div>
+
+    <!-- Orgánicos -->
+    <div style="text-align:center;"><p>Cáscara de banano</p><img src="Assets/cascarabanano.png" alt="Cáscara de banano" class="residuo" draggable="true" data-tipo="organico"></div>
+    <div style="text-align:center;"><p>Restos de comida</p><img src="Assets/restoscomida.png" alt="Restos de comida" class="residuo" draggable="true" data-tipo="organico"></div>
+    <div style="text-align:center;"><p>Hojas</p><img src="Assets/hojas.png" alt="Hojas" class="residuo" draggable="true" data-tipo="organico"></div>
+    <div style="text-align:center;"><p>Pan viejo</p><img src="Assets/panviejo.png" alt="Pan viejo" class="residuo" draggable="true" data-tipo="organico"></div>
+    <div style="text-align:center;"><p>Frutas podridas</p><img src="Assets/frutaspodridas.png" alt="Frutas podridas" class="residuo" draggable="true" data-tipo="organico"></div>
+
+    <!-- No Aprovechables -->
+    <div style="text-align:center;"><p>Papel higiénico</p><img src="Assets/papelhigienico.png" alt="Papel higiénico usado" class="residuo" draggable="true" data-tipo="no-aprovechable"></div>
+    <div style="text-align:center;"><p>Paquete sucio</p><img src="Assets/paquetes.png" alt="Paquete sucio" class="residuo" draggable="true" data-tipo="no-aprovechable"></div>
+    <div style="text-align:center;"><p>Toalla higiénica</p><img src="Assets/toalla.png" alt="Toalla higiénica" class="residuo" draggable="true" data-tipo="no-aprovechable"></div>
+    <div style="text-align:center;"><p>Colilla de cigarro</p><img src="Assets/cigarro.png" alt="Colilla de cigarro" class="residuo" draggable="true" data-tipo="no-aprovechable"></div>
+    <div style="text-align:center;"><p>Plato sucio</p><img src="Assets/platosucio.png" alt="Plato de icopor sucio" class="residuo" draggable="true" data-tipo="no-aprovechable"></div>
+</div>
+    <!-- CANECAS ABAJO -->
+    <div id="canecas" style="display: flex; justify-content: space-around; margin-top: 50px;">
+        <!-- Caneca Aprovechable -->
+        <div class="caneca" data-tipo="aprovechable" style="text-align: center;">
+            <h3>Aprovechables</h3>
+            <img src="Assets/aprovechable.png" alt="Caneca Aprovechable" width="150">
+            <div class="contenedor-drop"></div>
+        </div>
+
+        <!-- Caneca Orgánica -->
+        <div class="caneca" data-tipo="organico" style="text-align: center;">
+            <h3>Orgánicos</h3>
+            <img src="Assets/organicos.png" alt="Caneca Orgánica" width="150">
+            <div class="contenedor-drop"></div>
+        </div>
+
+        <!-- Caneca No Aprovechable -->
+        <div class="caneca" data-tipo="no-aprovechable" style="text-align: center;">
+            <h3>No Aprovechables</h3>
+            <img src="Assets/noaprovechables.png" alt="Caneca No Aprovechable" width="150">
+            <div class="contenedor-drop"></div>
+        </div>
+    </div>
+
+    <!-- MENSAJE -->
+    <div id="mensaje" style="margin-top: 40px; text-align: center;"></div>
+    <script src="script.js"></script>
+
+</body>
+</html>
